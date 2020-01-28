@@ -8,8 +8,8 @@ import JokePage from './pages/joke/Joke';
 const Routes = () => (
     <BrowserRouter>
         <Switch>
-            <Route path="/joke" component={JokePage}></Route>
-            <Route path="/" component={HomePage}></Route>
+            <Route path={`${process.env.PUBLIC_URL}/joke`} component={JokePage}></Route>
+            <Route path={`${process.env.PUBLIC_URL}/`} component={HomePage}></Route>
         </Switch>
     </BrowserRouter>
 );
