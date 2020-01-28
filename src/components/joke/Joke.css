@@ -1,0 +1,9 @@
+.joke-container {
+  width: 100%;
+  font-size: 30px;
+  background: #baff00;
+  color: rgb(0, 100, 55);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}

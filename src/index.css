@@ -1,13 +1,26 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Banger";
+  src: url("https://fonts.googleapis.com/css?family=Bangers&display=swap");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: #baff00;
+  font-family: "Bangers", cursive;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: rgb(0, 100, 55);
+}
+
+#root {
+  width: 100%;
+  height: 100%;
 }
