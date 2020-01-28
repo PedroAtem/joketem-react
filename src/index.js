@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { Store } from './store';
+import { createBrowserHistory } from 'history';
 
 ReactDOM.render(<Provider store={Store}><App /></Provider>, document.getElementById('root'));
 
@@ -12,3 +13,5 @@ ReactDOM.render(<Provider store={Store}><App /></Provider>, document.getElementB
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+export const history = createBrowserHistory({ basename: process.env.PUBLIC_URL });
