@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Button.css';
+import './style.css';
 
 class Home extends Component {
     render() {

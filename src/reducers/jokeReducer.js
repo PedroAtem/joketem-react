@@ -1,16 +1,21 @@
-import { JOKE_UPDATE_VALUE } from '../actions/actionTypes';
+import { JOKE_UPDATE_VALUE, LOADING_UPDATE_VALUE } from '../actions/actionTypes';
 
 const initialState = {
-    joke: 'Laboris dolore occaecat amet velit nostrud labore in culpa commodo officia officia quis magna irure.'
+    joke: '',
+    loading: false
 };
 
 export const jokeReducer = (state = initialState, action) => {
-    console.log(action)
     switch (action.type) {
         case JOKE_UPDATE_VALUE:
             return {
                 ...state,
                 joke: action.joke
+            }
+        case LOADING_UPDATE_VALUE:
+            return {
+                ...state,
+                loading: action.show
             }
         default:
             return state;

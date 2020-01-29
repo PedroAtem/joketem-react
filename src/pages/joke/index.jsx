@@ -3,35 +3,34 @@ import queryString from 'query-string';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Button from '../../components/button/Button';
-import Joke from '../../components/joke/Joke';
-import { updateJoke } from '../../actions'
+import Button from '../../components/button';
+import Joke from '../../components/joke';
 
-import './Joke.css';
+import { updateJoke, updateName } from '../../actions'
+
+import './style.css';
 
 class JokePage extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            name: '',
-            joke: 'Ad id in deserunt nulla veniam ad reprehenderit Lorem cillum dolor exercitation velit.'
-        }
     }
 
     componentDidMount() {
         const queryParams = queryString.parse(this.props.location.search)
         const { name } = queryParams;
-        this.setState({ name });
+        if (name) {
+            this.props.updateName(name);
+        }
+        this.props.updateJoke();
     }
 
     render() {
-        const { joke, updateJoke } = this.props;
+        const { name, joke, loading, updateJoke } = this.props;
 
         return (
             <div className="joke">
-                <h1>Hello {this.state.name}!!!</h1>
-                <Button click={() => updateJoke('mudou')} text="loading ? 'Getting Joke...' : 'Get Joke!'"></Button>
+                <h1>Hello { name ? name : 'Stranger' }!!!</h1>
+                <Button disabled={loading} click={() => updateJoke()} text={loading ? 'Getting Joke...' : 'Get Joke!'}></Button>
                 <Joke text={joke}></Joke>
             </div>
         );
@@ -39,10 +38,12 @@ class JokePage extends Component {
 }
 
 const mapStateToProps = store => ({
-    joke: store.jokeState.joke
+    joke: store.jokeState.joke,
+    loading: store.jokeState.loading,
+    name: store.nameState.name
 });
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ updateJoke }, dispatch);
+  bindActionCreators({ updateJoke, updateName }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(JokePage);
