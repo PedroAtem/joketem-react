@@ -11,10 +11,6 @@ import { updateJoke, updateName } from '../../actions'
 import './style.css';
 
 class JokePage extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         const queryParams = queryString.parse(this.props.location.search)
         const { name } = queryParams;

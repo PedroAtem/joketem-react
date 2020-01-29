@@ -10,10 +10,6 @@ import { updateName } from '../../actions'
 import './style.css';
 
 class HomePage extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     goJoke = () => {
         const { name } = this.props;
         this.props.history.push(`/joke${ name ? `?name=${name}` : `` }`);
