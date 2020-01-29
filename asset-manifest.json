@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/joketem-react/static/css/main.89fac48d.chunk.css",
+    "main.js": "/joketem-react/static/js/main.0092e4b7.chunk.js",
+    "main.js.map": "/joketem-react/static/js/main.0092e4b7.chunk.js.map",
+    "runtime-main.js": "/joketem-react/static/js/runtime-main.e146faa5.js",
+    "runtime-main.js.map": "/joketem-react/static/js/runtime-main.e146faa5.js.map",
+    "static/js/2.6c37fffd.chunk.js": "/joketem-react/static/js/2.6c37fffd.chunk.js",
+    "static/js/2.6c37fffd.chunk.js.map": "/joketem-react/static/js/2.6c37fffd.chunk.js.map",
+    "index.html": "/joketem-react/index.html",
+    "precache-manifest.376bba9bddffda1ff47f33d426b0b66e.js": "/joketem-react/precache-manifest.376bba9bddffda1ff47f33d426b0b66e.js",
+    "service-worker.js": "/joketem-react/service-worker.js",
+    "static/css/main.89fac48d.chunk.css.map": "/joketem-react/static/css/main.89fac48d.chunk.css.map",
+    "static/js/2.6c37fffd.chunk.js.LICENSE": "/joketem-react/static/js/2.6c37fffd.chunk.js.LICENSE",
+    "static/media/logo.svg": "/joketem-react/static/media/logo.84e66372.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e146faa5.js",
+    "static/js/2.6c37fffd.chunk.js",
+    "static/css/main.89fac48d.chunk.css",
+    "static/js/main.0092e4b7.chunk.js"
+  ]
+}
